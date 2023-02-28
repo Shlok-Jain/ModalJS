@@ -1,0 +1,187 @@
+.modaljs-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modaljs-modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+    border: none;
+    border-radius: 3px;
+    min-width: 400px;
+    padding: 10px;
+}
+
+.modaljs-modal-title {
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 30px;
+    padding: 10px;
+    min-height: 30px;
+    border-bottom: 1px solid grey;
+}
+
+.modaljs-modal-body {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    min-height: 100px;
+    color: rgb(73, 73, 73);
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.modaljs-modal-button {
+    padding: 10px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modaljs-close-btn {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(255, 45, 45);
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 325ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modaljs-close-btn:hover {
+    background-color: rgb(247, 207, 207);
+}
+
+.modaljs-btn-red {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(255, 45, 45);
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 325ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modaljs-btn-red:hover {
+    background-color: rgb(247, 207, 207);
+}
+
+.modaljs-btn-green {
+    padding: 10px;
+    font-size: 15px;
+    color: #28b32f;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 325ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modaljs-btn-green:hover {
+    background-color: rgb(198, 255, 196);
+}
+
+.modaljs-btn-yellow {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(199, 199, 0);
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 325ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modaljs-btn-yellow:hover {
+    background-color: rgb(247, 255, 173);
+}
+
+.modaljs-btn-blue {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(38, 14, 255);
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 325ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modaljs-btn-blue:hover {
+    background-color: rgb(211, 203, 253);
+}
+
+@keyframes modaljs-overlay-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modaljs-modal-show {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes modaljs-overlay-hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes modaljs-modal-hide {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .modaljs-modal {
+        width: 90vw;
+        min-width: 0px;
+    }
+}

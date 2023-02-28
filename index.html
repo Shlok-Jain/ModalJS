@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="fYeM8GYPFaXiKyFLT_k5yXCmlq0y2i_2LYylAqu6dgI" />
+    <meta name="description"
+        content="This is a javascript library for showing notifications in javascript apps, React apps and many more.....">
+    <meta name="keywords" content="HTML, JS, notification, library, react, notificationjs, js libbrary, javscript">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModalJS : By Shlok Jain</title>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script> -->
+
+    <!-- prismjs -->
+    <link rel="stylesheet" href="/prismjs/prism.css">
+    <script src="/prismjs/prism.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="icon">
+            Modal<span>JS</span>
+        </div>
+        <ul id="navul">
+            <li onclick="closenav()"><a href="#main">Home</a></li>
+            <li onclick="closenav()"><a href="#demo">Demo</a></li>
+            <li onclick="closenav()"><a href="#usage">Usage</a></li>
+            <li onclick="closenav()"><a href="#features">Features</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <svg viewBox="0 0 100 80" width="40" height="40" fill="white">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+        </div>
+    </nav>
+    <section id="main">
+        <section class="intro">
+            <h1><span>ModalJS library </span><br>- By Shlok Jain</h1>
+            <div class="intro-text">
+                This is a javascript library for showing modals in javascript apps, React apps and many more....., It has many features like adding custom buttons, you can choose to make modal draggable or not, This modals are completely editable and you can use HTML to make it's body, and works well in all modern platforms, it is compatible with mobile as well as computer devices.
+                I hope you will like it:
+            </div>
+            <div class="git-repo">
+                <span class="github">Github Repo:</span>
+                <a href="https://github.com/Shlok-Jain/ModalJS" target="_blank">https://github.com/Shlok-Jain/ModalJS</a>
+            </div>
+            <div class="demo">
+                <a href="#demo">
+                    <button id="demo-btn">
+                        Click to view DEMO!
+                    </button></a>
+            </div>
+        </section>
+    </section>
+
+    <section id="demo">
+        <h1>Demo:</h1>
+        <div class="demo-container">
+            <div class="demo-child type">
+                <h3>Type:</h3>
+                <label>
+                    <input type="radio" name="type" checked value="normal">
+                    <span class="text">Normal</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="success">
+                    <span class="text">Success</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="alert">
+                    <span class="text">Alert</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="error">
+                    <span class="text">Error</span>
+                </label>
+
+            </div>
+            <div class="demo-child theme">
+                <h3>Theme:</h3>
+                <label>
+                    <input type="radio" name="theme" checked value="light">
+                    <span class="text">Light</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="theme" value="dark">
+                    <span class="text">Dark</span>
+                </label>
+            </div>
+            <div class="demo-child duration">
+                <h3>Duration:</h3>
+                <select name="duration" id="duration">
+                    <option value="1000">1000ms</option>
+                    <option value="2000">2000ms</option>
+                    <option value="3000">3000ms</option>
+                    <option value="4000">4000ms</option>
+                    <option value="5000" selected>5000ms</option>
+                    <option value="6000">6000ms</option>
+                </select>
+            </div>
+        </div>
+        <div class="shownotification">
+            <button onclick="clicked()">Show Notification</button>
+        </div>
+    </section>
+
+    <section id="usage">
+        <h1>Usage:</h1>
+        <div class="cdnlinks">
+            Include following CDN links in &lt;head&gt; of your HTML
+
+            <pre style="margin: 30px;border-radius: 10px;">
+<button onclick="copyToClipboard('htmlcode')" style="padding: 5px;font-size: 15px;cursor: pointer;">Copy code</button>                
+<code id="htmlcode" class="language-html" style="font-size: 20px;">&lt;head&gt;
+    &lt;script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/ModalJS@latest/index.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/ModalJS@latest/index.css"&gt;
+&lt;/head&gt;
+</code></pre>
+
+            This is a basic example for showing modal
+
+            <pre style="margin: 30px;border-radius: 10px;">
+<button onclick="copyToClipboard('jscode')" style="padding: 5px;font-size: 15px;cursor: pointer;">Copy code</button>
+<code class="language-js" id="jscode" style="font-size: 20px;">const modal = new ModalJS({    //initialising modal
+    title: 'Title of modal goes here',
+    body: 'Your main content of the modal goes here',
+    custom_buttons: [
+        {
+            text: 'SUBMIT',
+            theme: 'green',
+            onclick: () => { console.log('Thank You for submitting') },
+        },
+    ],
+    close_btn_text: "CLOSE",
+    draggable: true,
+    close_on_out_click: true,
+    onclose:()=>{console.log('closed')}
+})
+
+modal.show()       //trigger this when you want to show modal
+</code></pre>
+
+Explaination: <br><br>
+<span style="font-size: 20px; font-family: monospace">
+You are required to pass a JSON as parameter, <span style="color: red">title</span> contains title of modal and <span style="color: red">body</span> contains main content, <br>
+In the <span style="color: red">body</span> of modal you can add HTML code also, so you can also create a login or any other custom modal for different purposes. <br><br>
+Now custom_buttons is an array to be passed if you want to show custom buttons.<br><br> A default button available on modal will be to close it, You donot need to specify close button in this array, in this array you have to pass another JSON which contains details of button such as <span style="color: red">text</span> to be represented , <span style="color: red">theme</span>( green, blue, yellow, red ) , and an <span style="color: red">onclick</span> listner(an arrow function). You can put any number of buttons just pass them in array in order you want them to be displayed <br><br>
+
+Other than this some there are some other options available such as <br>
+<span style="color: red">close_btn_text</span> : to specify text written on default close button (put it in capital for fancy look!) <br>
+<span style="color: red">draggable</span> : to make modal draggable on thhe screen <br>
+and last but probably not the least <br>
+<span style="color: red">onclose</span> : a function you want to run on closing the modal (optional) <br>
+<br>
+Use the <span style="color: red">.show()</span> method to show the modal. And if you want to programatically close modal then you can also use <span style="color: red">.hide()</span> method. <br><br>
+</span>
+
+
+            Now just <span class="chill">chill</span>!!!!
+        </div>
+    </section>
+
+    <section id="features">
+        <h1>Features:</h1>
+        <ul>
+            <li>Swipe to close on touch devices</li>
+            <li>You can choose from two themes(light,dark)</li>
+            <li>Pause timer when window loses focus</li>
+            <li>Different types of notifications for different type of messages( normal, alert, error, success )</li>
+            <li>You can manually close notification( .hide() method)</li>
+            <li>hover on notification to pause timer</li>
+            <li>You can specify time to show notification</li>
+            <li>and many more.....</li>
+        </ul>
+    </section>
+
+    <style>
+        @import"https://use.typekit.net/rcr1opg.css";
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .git-repo{
+            font-size: 20px;
+            margin: auto;
+            text-align: center;
+            margin:50px;
+        }
+        .git-repo>a{
+            font-style: normal;
+            text-decoration: none;
+            background-color: #5460f3;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 10px;
+            color: black;
+            transition: all 325ms;
+            font-family: monospace;
+        }
+        .git-repo>a:hover{
+            background-color: #7f88f7;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
+
+        body {
+            background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%));
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        #demo {
+            font-family: cubano, sans-serif;
+            
+            width: 100%;
+            text-align: center;
+            color: white;
+            margin-bottom: 100px;
+            scroll-padding: 20px;
+        }
+
+        #demo>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-weight: 200;
+            margin: 20px auto;
+        }
+
+        #demo>.demo-container {
+            display: flex;
+            font-size: 25px;
+            font-weight: 200;
+            font-family: cubano, sans-serif;
+            margin: 50px 0px;
+        }
+
+        .demo-child {
+            font-family: cubano, sans-serif;
+            width: 33.33%;
+        }
+
+        .type {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
+
+        .type>h3 {
+            margin: 10px;
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            color: plum;
+        }
+
+        .theme {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
+
+        .theme>h3 {
+            margin: 10px;
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            color: plum;
+        }
+
+        .duration {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
+
+        .duration>h3 {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            font-size: 30px;
+            color: plum;
+        }
+
+        .duration>select {
+            font-family: cubano, sans-serif;
+            width: 90%;
+            font-size: 25px;
+        }
+
+        .shownotification>button {
+            background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
+            padding: 0.75rem 2.75rem;
+            font-weight: 200;
+            outline: none;
+            box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+            transition: 325ms all;
+            border: none;
+            font-family: cubano, sans-serif;
+        }
+
+        .shownotification>button:hover {
+            opacity: 0.8;
+        }
+
+        #usage {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: cubano, sans-serif;
+            margin-bottom: 70px;
+        }
+
+        #usage>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-weight: 200;
+            margin: 20px auto;
+        }
+
+        #usage>.cdnlinks {
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+        }
+
+        .chill {
+            background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: cubano, sans-serif;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #features {
+            width: 100%;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            color: white;
+            margin-bottom: 70px;
+        }
+
+        #features>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            margin: 20px auto;
+        }
+
+        #features>ul {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            text-align: left;
+        }
+
+        #features>ul>li {
+            list-style: disc;
+            font-size: 25px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+            margin: 20px;
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            color: white;
+            font-size: 25px;
+            display: flex;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .icon {
+            font-family: cubano, sans-serif;
+            width: 30%;
+        }
+
+        nav>ul {
+            width: 70%;
+            font-family: cubano, sans-serif;
+            display: flex;
+            list-style: none;
+            justify-content: end;
+        }
+
+        nav>ul>li {
+            margin-left: 10%;
+            background: white;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: cubano, sans-serif;
+            transition: 325ms all;
+        }
+
+        nav>ul>li:hover {
+            background: linear-gradient(109.6deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: cubano, sans-serif;
+            transition: 325ms all;
+        }
+
+        .icon>span {
+            background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
+            font-family: cubano, sans-serif;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #main {
+            display: flex;
+            font-family: cubano, sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .intro {
+            color: aliceblue;
+            font-family: cubano, sans-serif;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        .intro>h1 {
+            font-size: 50px;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+
+        .intro>h1>span {
+            background: -webkit-linear-gradient(180deg, #f79d00, #64f38c);
+            background-clip: text;
+            font-family: cubano, sans-serif;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .intro-text {
+            font-size: 20px;
+            color: grey;
+            font-weight: 300;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            width: 70%;
+            margin: 30px auto;
+        }
+
+        #demo-btn {
+            background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
+            padding: 0.75rem 2.75rem;
+            font-weight: 200;
+            font-family: cubano, sans-serif;
+            outline: none;
+            box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+            transition: 325ms all;
+            border: none;
+            font-family: cubano, sans-serif;
+        }
+
+
+        #demo-btn:hover {
+            opacity: 0.8;
+        }
+
+        .demo {
+            display: flex;
+            justify-content: center;
+            font-family: cubano, sans-serif;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        @media only screen and (max-width:700px) {
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 10px;
+                width: 10%;
+            }
+
+            nav>ul {
+                position: absolute;
+                top: -200px;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                margin-left: -10px;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            nav>ul>li {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+
+            .icon {
+                width: 90%;
+            }
+
+            .intro>h1 {
+                font-size: 40px;
+            }
+
+            .intro>h1>span {
+                font-size: 40px;
+            }
+
+            .demo-child>h3 {
+                font-size: 25px;
+                font-weight: 100;
+            }
+
+            label>span {
+                font-size: 20px;
+                font-weight: 50;
+            }
+
+            #duration {
+                font-size: 20px;
+            }
+
+            #usage>.cdnlinks {
+                font-size: 20px;
+            }
+
+            #features>ul>li {
+                font-size: 20px;
+                font-weight: 50;
+            }
+        }
+
+        @keyframes navopen {
+            0% {
+                top: -200px;
+            }
+
+            100% {
+                top: 60px;
+            }
+        }
+
+        @keyframes navclose {
+            0% {
+                top: 60px;
+            }
+
+            100% {
+                top: -200px;
+            }
+        }
+    </style>
+    <script>
+        function clicked() {
+            var type = document.querySelector('input[name="type"]:checked').value;
+            var theme = document.querySelector('input[name="theme"]:checked').value;
+            var duration = document.getElementById('duration').value
+
+            const modal = new ModalJS({    //initialising modal
+    title: 'Title of modal goes here',
+    body: 'Your main content of the modal goes here',
+    custom_buttons: [
+        {
+            text: 'SUBMIT',
+            theme: 'green',
+            onclick: () => { console.log('Thank You for submitting') },
+        },
+    ],
+    close_btn_text: "CLOSE",
+    draggable: true,
+    close_on_out_click: true,
+    onclose:()=>{console.log('closed')}
+})
+
+            modal.show()
+        }
+
+        document.getElementById("hamburger").onclick = function () {
+            if (window.getComputedStyle(document.getElementById('navul')).top == '60px') {
+                document.getElementById('navul').style.animation = 'navclose 325ms linear forwards'
+            }
+            else {
+                document.getElementById('navul').style.animation = 'navopen 325ms linear forwards'
+
+            }
+        }
+
+        function closenav() {
+            document.getElementById('navul').style.animation = 'navclose 325ms linear forwards'
+        }
+
+        function copyToClipboard(var1) {
+            let val = document.getElementById(var1).innerText;
+            const selBox = document.createElement('textarea');
+            selBox.style.position = 'fixed';
+            selBox.style.left = '0';
+            selBox.style.top = '0';
+            selBox.style.opacity = '0';
+            selBox.value = val;
+            document.body.appendChild(selBox);
+            selBox.focus();
+            selBox.select();
+            document.execCommand('copy');
+            document.body.removeChild(selBox);
+
+            var copy_notification = new NotificationJS({
+                message: 'Copied to clipboard',  //specify message here
+                type: 'success',                          //specify type of notification
+                duration: 5000,                           //duration in milliseconds
+                theme: 'dark'
+            })
+
+            copy_notification.show()
+            // alert('text copied to clipboard, please use Ctrl-V to paste the data');
+
+        }  
+    </script>
+
+</body>
+
+</html>
