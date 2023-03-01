@@ -13,6 +13,9 @@
 
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.css">
     <!-- <link rel="stylesheet" href="index.css">
         <script src="./index.js"></script> -->
 
@@ -33,6 +36,7 @@
             <li onclick="closenav()"><a href="#demo">Demo</a></li>
             <li onclick="closenav()"><a href="#usage">Usage</a></li>
             <li onclick="closenav()"><a href="#features">Features</a></li>
+            <li onclick="closenav()"><a href="#others">Others</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <svg viewBox="0 0 100 80" width="40" height="40" fill="white">
@@ -46,12 +50,16 @@
         <section class="intro">
             <h1><span>ModalJS library </span><br>- By Shlok Jain</h1>
             <div class="intro-text">
-                This is a javascript library for showing modals in javascript apps, React apps and many more....., It has many features like adding custom buttons, you can choose to make modal draggable or not, This modals are completely editable and you can use HTML to make it's body, and works well in all modern platforms, it is compatible with mobile as well as computer devices.
+                This is a javascript library for showing modals in javascript apps, React apps and many more....., It
+                has many features like adding custom buttons, you can choose to make modal draggable or not, This modals
+                are completely editable and you can use HTML to make it's body, it is compatible with mobile as well as
+                computer devices.
                 I hope you will like it:
             </div>
             <div class="git-repo">
-                <span class="github">Github Repo:</span>
-                <a href="https://github.com/Shlok-Jain/ModalJS" target="_blank">https://github.com/Shlok-Jain/ModalJS</a>
+                <span class="github">Github Repo:</span> <br><br>
+                <a href="https://github.com/Shlok-Jain/ModalJS"
+                    target="_blank">www.github.com/Shlok-Jain/ModalJS</a>
             </div>
             <div class="demo">
                 <a href="#demo">
@@ -68,52 +76,52 @@
             <div class="demo-child type">
                 <h3>Type:</h3>
                 <label>
-                    <input type="radio" name="type" checked value="normal">
-                    <span class="text">Normal</span>
+                    <input type="radio" name="type"  value="normal">
+                    <span class="text">Normal body(eg: cookies modal)</span>
                 </label>
 
                 <label>
-                    <input type="radio" name="type" value="success">
-                    <span class="text">Success</span>
+                    <input type="radio" name="type" checked value="html">
+                    <span class="text">HTML body(eg: login modal)</span>
                 </label>
 
                 <label>
-                    <input type="radio" name="type" value="alert">
-                    <span class="text">Alert</span>
-                </label>
-
-                <label>
-                    <input type="radio" name="type" value="error">
-                    <span class="text">Error</span>
+                    <input type="radio" name="type" value="long">
+                    <span class="text">Very long body</span>
                 </label>
 
             </div>
             <div class="demo-child theme">
-                <h3>Theme:</h3>
+                <h3>Btn Theme:</h3>
                 <label>
-                    <input type="radio" name="theme" checked value="light">
-                    <span class="text">Light</span>
+                    <input type="radio" name="theme" checked value="green">
+                    <span class="text">green</span>
+                </label>
+                <label>
+                    <input type="radio" name="theme" value="blue">
+                    <span class="text">blue</span>
+                </label>
+                <label>
+                    <input type="radio" name="theme" value="yellow">
+                    <span class="text">yellow</span>
+                </label>
+                <label>
+                    <input type="radio" name="theme" value="red">
+                    <span class="text">red</span>
                 </label>
 
-                <label>
-                    <input type="radio" name="theme" value="dark">
-                    <span class="text">Dark</span>
-                </label>
+
             </div>
             <div class="demo-child duration">
-                <h3>Duration:</h3>
+                <h3>Draggable:</h3>
                 <select name="duration" id="duration">
-                    <option value="1000">1000ms</option>
-                    <option value="2000">2000ms</option>
-                    <option value="3000">3000ms</option>
-                    <option value="4000">4000ms</option>
-                    <option value="5000" selected>5000ms</option>
-                    <option value="6000">6000ms</option>
+                    <option value="true">true</option>
+                    <option value="false">false</option>
                 </select>
             </div>
         </div>
         <div class="shownotification">
-            <button onclick="clicked()">Show Notification</button>
+            <button onclick="clicked()">Show Modal</button>
         </div>
     </section>
 
@@ -135,7 +143,7 @@
             <pre style="margin: 30px;border-radius: 10px;">
 <button onclick="copyToClipboard('jscode')" style="padding: 5px;font-size: 15px;cursor: pointer;">Copy code</button>
 <code class="language-js" id="jscode" style="font-size: 20px;">const modal = new ModalJS({    //initialising modal
-    title: 'Title of modal goes here',
+    title: 'Title of modal',
     body: 'Your main content of the modal goes here',
     custom_buttons: [
         {
@@ -153,20 +161,32 @@
 modal.show()       //trigger this when you want to show modal
 </code></pre>
 
-Explaination: <br><br>
-<span style="font-size: 20px; font-family: monospace">
-You are required to pass a JSON as parameter, <span style="color: red">title</span> contains title of modal and <span style="color: red">body</span> contains main content, <br>
-In the <span style="color: red">body</span> of modal you can add HTML code also, so you can also create a login or any other custom modal for different purposes. <br><br>
-Now custom_buttons is an array to be passed if you want to show custom buttons.<br><br> A default button available on modal will be to close it, You donot need to specify close button in this array, in this array you have to pass another JSON which contains details of button such as <span style="color: red">text</span> to be represented , <span style="color: red">theme</span>( green, blue, yellow, red ) , and an <span style="color: red">onclick</span> listner(an arrow function). You can put any number of buttons just pass them in array in order you want them to be displayed <br><br>
+            Explaination: <br><br>
+            <span style="font-size: 20px; font-family: monospace">
+                You are required to pass a JSON as parameter, <span style="color: red">title</span> contains title of
+                modal and <span style="color: red">body</span> contains main content, <br>
+                In the <span style="color: red">body</span> of modal you can add HTML code also, so you can also create
+                a login or any other custom modal for different purposes. <br><br>
+                Now custom_buttons is an array to be passed if you want to show custom buttons.<br><br> A default button
+                available on modal will be to close it, You donot need to specify close button in this array, in this
+                array you have to pass another JSON which contains details of button such as <span
+                    style="color: red">text</span> to be represented , <span style="color: red">theme</span>( green,
+                blue, yellow, red ) , and an <span style="color: red">onclick</span> listner(an arrow function). You can
+                put any number of buttons just pass them in array in order you want them to be displayed <br><br>
 
-Other than this some there are some other options available such as <br>
-<span style="color: red">close_btn_text</span> : to specify text written on default close button (put it in capital for fancy look!) <br>
-<span style="color: red">draggable</span> : to make modal draggable on thhe screen <br>
-and last but probably not the least <br>
-<span style="color: red">onclose</span> : a function you want to run on closing the modal (optional) <br>
-<br>
-Use the <span style="color: red">.show()</span> method to show the modal. And if you want to programatically close modal then you can also use <span style="color: red">.hide()</span> method. <br><br>
-</span>
+                Other than this some there are some other options available such as <br>
+                <span style="color: red">close_btn_text</span> : to specify text written on default close button (put it
+                in capital for fancy look!) <br>
+                <span style="color: red">draggable</span> : to make modal draggable on thhe screen <br>
+                <span style="color:red">close_on_out_click</span> : to close modal when cliked outside
+                and last but probably not the least <br>
+                <span style="color: red">onclose</span> : a function you want to run on closing the modal (optional)
+                <br>
+                <br>
+                Use the <span style="color: red">.show()</span> method to show the modal. And if you want to
+                programatically close modal then you can also use <span style="color: red">.hide()</span> method.
+                <br><br>
+            </span>
 
 
             Now just <span class="chill">chill</span>!!!!
@@ -176,14 +196,21 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
     <section id="features">
         <h1>Features:</h1>
         <ul>
-            <li>Swipe to close on touch devices</li>
-            <li>You can choose from two themes(light,dark)</li>
-            <li>Pause timer when window loses focus</li>
-            <li>Different types of notifications for different type of messages( normal, alert, error, success )</li>
-            <li>You can manually close notification( .hide() method)</li>
-            <li>hover on notification to pause timer</li>
-            <li>You can specify time to show notification</li>
+            <li>You can add HTML in body</li>
+            <li>You can make modals draggable</li>
+            <li>Add any number of custom buttons</li>
+            <li>Event listners for all buttons</li>
+            <li>Four different themes for button available( red, yellow, blue, green )</li>
+            <li>You can programatically close modal( .hide() method)</li>
+            <li>Looks fancy</li>
             <li>and many more.....</li>
+        </ul>
+    </section>
+
+    <section id="others">
+        <h1>My other works:</h1>
+        <ul>
+            <li>Notification-library: <a href="https://shlok-jain.github.io/Notification-library/" target="_blank">shlok-jain.github.io/Notification-library/</a></li>
         </ul>
     </section>
 
@@ -195,26 +222,31 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
             padding: 0;
         }
 
-        .git-repo{
+        .git-repo {
             font-size: 20px;
-            margin: auto;
             text-align: center;
-            margin:50px;
+            margin: 30px 0px;
         }
-        .git-repo>a{
+
+        .git-repo>span {
+            margin: 10px;
+        }
+
+        .git-repo>a {
             font-style: normal;
             text-decoration: none;
             background-color: #5460f3;
-            padding: 10px;
+            padding: 5px;
             border-radius: 10px;
-            margin: 10px 10px;
             color: black;
             transition: all 325ms;
             font-family: monospace;
         }
-        .git-repo>a:hover{
+
+        .git-repo>a:hover {
             background-color: #7f88f7;
         }
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 60px;
@@ -228,7 +260,7 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
 
         #demo {
             font-family: cubano, sans-serif;
-            
+
             width: 100%;
             text-align: center;
             color: white;
@@ -389,9 +421,55 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
             margin: 20px;
         }
 
+        #others {
+            width: 100%;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            color: white;
+            margin-bottom: 70px;
+        }
+
+        #others>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            margin: 20px auto;
+        }
+
+        #others>ul {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            text-align: left;
+        }
+
+        #others>ul>li {
+            list-style: disc;
+            font-size: 25px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+            margin: 20px;
+        }
+        #others>ul>li>a{
+            font-style: normal;
+            text-decoration: none;
+            background-color: #5460f3;
+            padding: 5px;
+            border-radius: 10px;
+            color: black;
+            transition: all 325ms;
+            font-family: monospace;
+        }
+        #others>ul>li>a:hover{
+            background-color: #7f88f7;
+        }
+
         nav {
             width: 100%;
-            height: 60px;
+            height: 55px;
             color: white;
             font-size: 25px;
             display: flex;
@@ -533,7 +611,7 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
 
             nav>ul {
                 position: absolute;
-                top: -200px;
+                top: -300px;
                 flex-direction: column;
                 text-align: center;
                 background-color: rgba(0, 0, 0, 0.8);
@@ -586,7 +664,7 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
 
         @keyframes navopen {
             0% {
-                top: -200px;
+                top: -300px;
             }
 
             100% {
@@ -600,7 +678,7 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
             }
 
             100% {
-                top: -200px;
+                top: -300px;
             }
         }
     </style>
@@ -608,25 +686,85 @@ Use the <span style="color: red">.show()</span> method to show the modal. And if
         function clicked() {
             var type = document.querySelector('input[name="type"]:checked').value;
             var theme = document.querySelector('input[name="theme"]:checked').value;
-            var duration = document.getElementById('duration').value
+            var draggable = document.getElementById('duration').value;
 
-            const modal = new ModalJS({    //initialising modal
-    title: 'Title of modal goes here',
-    body: 'Your main content of the modal goes here',
-    custom_buttons: [
-        {
-            text: 'SUBMIT',
-            theme: 'green',
-            onclick: () => { console.log('Thank You for submitting') },
-        },
-    ],
-    close_btn_text: "CLOSE",
-    draggable: true,
-    close_on_out_click: true,
-    onclose:()=>{console.log('closed')}
-})
+            if (type == 'normal') {
+                const modal = new ModalJS({    //initialising modal
+                    title: 'Cookie settings',
+                    body: 'This website uses cookies to ensure you get the best experience on our website.',
+                    custom_buttons: [
+                        {
+                            text: 'ACCEPT AND CLOSE',
+                            theme: theme,
+                            onclick: () => {
+                                const my_notification = new NotificationJS({
+                                    message: 'I was triggered from custom button',
+                                    type: 'normal',
+                                    duration: 5000,
+                                    theme: 'dark'
+                                }).show()
+                            },
+                        },
+                    ],
+                    close_btn_text: "DISABLE COOKIES",
+                    draggable: draggable=='true' ? true : false,
+                    close_on_out_click: true,
+                    onclose: () => { console.log('closed') }
+                })
+                modal.show()
+            }
 
-            modal.show()
+            else if (type == 'html') {
+                const modal = new ModalJS({    //initialising modal
+                    title: 'Login',
+                    body: `
+  <div class="container" style="width:100%;display:flex;flex-direction:column;">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" style="width:90%; padding:10px;" placeholder="Enter Username" name="uname" required> <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" style="width:90%; padding:10px;" placeholder="Enter Password" name="psw" required> <br>
+        
+    </div>
+
+  </div>`,
+                    custom_buttons: [
+                        {
+                            text: 'LOGIN',
+                            theme: theme,
+                            onclick: () => {
+                                const my_notification = new NotificationJS({
+                                    message: 'You logged in successfully',
+                                    type: 'success',
+                                    duration: 5000,
+                                    theme: 'dark'
+                                }).show()
+                            },
+                        },
+                    ],
+                    close_btn_text: "CANCEL",
+                    draggable: draggable=='true' ? true : false,
+                    close_on_out_click: true,
+                    onclose: () => { console.log('closed') }
+                })
+                modal.show()
+            }
+            else if (type == 'long') {
+                const modal = new ModalJS({    //initialising modal
+                    title: 'Terms and conditions',
+                    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+                    
+                    close_btn_text: "CLOSE",
+                    draggable: draggable=='true' ? true : false,
+                    close_on_out_click: true,
+                    onclose: () => { console.log('closed') }
+                })
+                modal.show()
+            }
+
+
+
+
         }
 
         document.getElementById("hamburger").onclick = function () {

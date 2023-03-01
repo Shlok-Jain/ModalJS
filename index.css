@@ -21,6 +21,7 @@
     border-radius: 3px;
     min-width: 400px;
     padding: 10px;
+    max-width: 80%;
 }
 
 .modaljs-modal-title {
@@ -179,9 +180,9 @@
     }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:550px) {
     .modaljs-modal {
-        width: 90vw;
+        width: 80%;
         min-width: 0px;
     }
 }

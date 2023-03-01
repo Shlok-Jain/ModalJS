@@ -38,7 +38,7 @@ class ModalJS {
         });
       }
       ;
-      if (this.json.draggable) {
+      if (this.json.draggable == true) {
         modal_title.style.cursor = "all-scroll";
         dragElement();
         function dragElement() {
