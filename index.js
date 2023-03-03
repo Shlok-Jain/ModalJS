@@ -5,6 +5,7 @@ class ModalJS {
       document.body.appendChild(overlay);
       this.overlay = overlay;
       this.json = json;
+      this.buttons = []
       const modal = document.createElement("div");
       const modal_title = document.createElement("div");
       const modal_body = document.createElement("div");
@@ -77,6 +78,7 @@ class ModalJS {
           btn.classList.add(`modaljs-btn-${button_list[i].theme}`);
           btn.addEventListener("click", button_list[i].onclick);
           modal_button.appendChild(btn);
+          this.buttons.push(btn)
         }
       }
       modal_button.appendChild(close_btn);

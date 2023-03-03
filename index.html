@@ -113,7 +113,7 @@
 
             </div>
             <div class="demo-child duration">
-                <h3>Draggable:</h3>
+                <h3>Drag:</h3>
                 <select name="duration" id="duration">
                     <option value="true">true</option>
                     <option value="false">false</option>
@@ -174,6 +174,8 @@ modal.show()       //trigger this when you want to show modal
                 blue, yellow, red ) , and an <span style="color: red">onclick</span> listner(an arrow function). You can
                 put any number of buttons just pass them in array in order you want them to be displayed <br><br>
 
+                <span style="color: red;">Note:</span> If you want to address a specific button( for example, in login form you want to show a spinner in login button when request is being made) then you can access it form <span style="color: red;">modal.buttons</span> array. (Replace modal with your initialising name)
+                (This array contains buttons in same order as that you defined in custom_buttons)
                 Other than this some there are some other options available such as <br>
                 <span style="color: red">close_btn_text</span> : to specify text written on default close button (put it
                 in capital for fancy look!) <br>
@@ -210,7 +212,7 @@ modal.show()       //trigger this when you want to show modal
     <section id="others">
         <h1>My other works:</h1>
         <ul>
-            <li>Notification-library: <a href="https://shlok-jain.github.io/Notification-library/" target="_blank">shlok-jain.github.io/Notification-library/</a></li>
+            <li>Notification-library: <a href="https://shlok-jain.github.io/Notification-library/" target="_blank">shlok - jain .github .io/ Notification-library</a></li>
         </ul>
     </section>
 
@@ -253,7 +255,7 @@ modal.show()       //trigger this when you want to show modal
         }
 
         body {
-            background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%));
+            background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%),hsl(294, 57%, 19%));
             min-height: 100vh;
             background-attachment: fixed;
         }
@@ -462,6 +464,7 @@ modal.show()       //trigger this when you want to show modal
             color: black;
             transition: all 325ms;
             font-family: monospace;
+            font-size: 20px;
         }
         #others>ul>li>a:hover{
             background-color: #7f88f7;
