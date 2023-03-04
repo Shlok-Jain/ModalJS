@@ -8,7 +8,7 @@ This is a javascript library for showing modals in javascript apps, React apps a
 
 ## Authors
 
-- [@Shlok_Jain](https://www.github.com/Shlok_Jain)
+- [@Shlok_Jain](https://www.github.com/Shlok-Jain)
 
 
 ## Demo
