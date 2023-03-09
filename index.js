@@ -40,6 +40,8 @@ class ModalJS {
       }
       ;
       if (this.json.draggable == true) {
+
+        //mouse
         modal_title.style.cursor = "all-scroll";
         dragElement();
         function dragElement() {
@@ -68,6 +70,29 @@ class ModalJS {
             document.onmousemove = null;
           }
         }
+
+        //touch
+        var inix,iniy,finx,finy
+        this.modal_title.addEventListener('touchstart',(e)=>{
+          inix = e.touches[0].clientX
+          iniy = e.touches[0].clientY
+        })
+        this.modal_title.addEventListener('touchmove',(e)=>{
+          finx = e.touches[0].clientX
+          finy = e.touches[0].clientY
+
+          var deltax = finx-inix
+          var deltay = finy-iniy
+
+          console.log(deltax,deltay)
+          modal.style.top = modal.offsetTop + deltay + "px";
+          modal.style.left = modal.offsetLeft + deltax + "px";
+
+          inix = e.touches[0].clientX;
+          iniy = e.touches[0].clientY;
+
+
+        })
       }
       ;
       if (this.json.custom_buttons) {
