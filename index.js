@@ -84,7 +84,7 @@ class ModalJS {
           var deltax = finx-inix
           var deltay = finy-iniy
 
-          console.log(deltax,deltay)
+          // console.log(deltax,deltay)
           modal.style.top = modal.offsetTop + deltay + "px";
           modal.style.left = modal.offsetLeft + deltax + "px";
 
