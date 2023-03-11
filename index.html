@@ -24,8 +24,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.css">
-    <!-- <link rel="stylesheet" href="index.css">
-        <script src="./index.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script>
 
     <!-- prismjs -->
     <link rel="stylesheet" href="/ModalJS/prismjs/prism.css">
@@ -124,10 +124,10 @@
 
             </div>
             <div class="demo-child duration">
-                <h3>Drag:</h3>
+                <h3>Theme:</h3>
                 <select name="duration" id="duration">
-                    <option value="true">true</option>
-                    <option value="false">false</option>
+                    <option value="light">light</option>
+                    <option value="dark">dark</option>
                 </select>
             </div>
         </div>
@@ -156,10 +156,11 @@
 <code class="language-js" id="jscode" style="font-size: 20px;">const modal = new ModalJS({    //initialising modal
     title: 'Title of modal',
     body: 'Your main content of the modal goes here',
+    theme: 'dark',        //light or dark
     custom_buttons: [
         {
             text: 'SUBMIT',
-            theme: 'green',
+            theme: 'green', //green, blue, red or yellow
             onclick: () => { console.log('Thank You for submitting') },
         },
     ],
@@ -175,7 +176,7 @@ modal.show()       //trigger this when you want to show modal
             Explaination: <br><br>
             <span style="font-size: 20px; font-family: monospace">
                 You are required to pass a JSON as parameter, <span style="color: red">title</span> contains title of
-                modal and <span style="color: red">body</span> contains main content, <br>
+                modal and <span style="color: red">body</span> contains main content, Two <span style="color:red;">theme</span> available(light , dark)<br>
                 In the <span style="color: red">body</span> of modal you can add HTML code also, so you can also create
                 a login or any other custom modal for different purposes. <br><br>
                 Now custom_buttons is an array to be passed if you want to show custom buttons.<br><br> A default button
@@ -211,6 +212,9 @@ modal.show()       //trigger this when you want to show modal
         <ul>
             <li>You can add HTML in body</li>
             <li>You can make modals draggable</li>
+            <li>Light and dark theme</li>
+            <li>Ripple effect in all buttons</li>
+            <li>Press ESC to close</li>
             <li>Add any number of custom buttons</li>
             <li>Event listners for all buttons</li>
             <li>Four different themes for button available( red, yellow, blue, green )</li>
@@ -709,9 +713,10 @@ modal.show()       //trigger this when you want to show modal
                 const modal = new ModalJS({    //initialising modal
                     title: 'Cookie settings',
                     body: 'This website uses cookies to ensure you get the best experience on our website.',
+                    theme:draggable,
                     custom_buttons: [
                         {
-                            text: 'ACCEPT AND CLOSE',
+                            text: 'ACCEPT',
                             theme: theme,
                             onclick: () => {
                                 const my_notification = new NotificationJS({
@@ -724,7 +729,7 @@ modal.show()       //trigger this when you want to show modal
                         },
                     ],
                     close_btn_text: "DISABLE COOKIES",
-                    draggable: draggable=='true' ? true : false,
+                    draggable: true,
                     close_on_out_click: true,
                     onclose: () => { console.log('closed') }
                 })
@@ -745,6 +750,7 @@ modal.show()       //trigger this when you want to show modal
     </div>
 
   </div>`,
+  theme:draggable,
                     custom_buttons: [
                         {
                             text: 'LOGIN',
@@ -760,7 +766,7 @@ modal.show()       //trigger this when you want to show modal
                         },
                     ],
                     close_btn_text: "CANCEL",
-                    draggable: draggable=='true' ? true : false,
+                    draggable: true,
                     close_on_out_click: true,
                     onclose: () => { console.log('closed') }
                 })
@@ -770,9 +776,9 @@ modal.show()       //trigger this when you want to show modal
                 const modal = new ModalJS({    //initialising modal
                     title: 'Terms and conditions',
                     body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-                    
+                    theme:draggable,
                     close_btn_text: "CLOSE",
-                    draggable: draggable=='true' ? true : false,
+                    draggable: true,
                     close_on_out_click: true,
                     onclose: () => { console.log('closed') }
                 })
