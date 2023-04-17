@@ -111,6 +111,7 @@
     transition: all 325ms;
     cursor: pointer;
     margin-left: 10px;
+    overflow: hidden;
 }
 .modaljs-btn-red-dark {
     background: #303030;
@@ -160,6 +161,7 @@
     transition: all 325ms;
     cursor: pointer;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .modaljs-btn-yellow-dark {
@@ -185,6 +187,7 @@
     transition: all 325ms;
     cursor: pointer;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .modaljs-btn-blue-dark {
