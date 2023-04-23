@@ -173,36 +173,133 @@
 modal.show()       //trigger this when you want to show modal
 </code></pre>
 
-            Explaination: <br><br>
-            <span style="font-size: 20px; font-family: monospace">
-                You are required to pass a JSON as parameter, <span style="color: red">title</span> contains title of
-                modal and <span style="color: red">body</span> contains main content, Two <span style="color:red;">theme</span> available(light , dark)<br>
-                In the <span style="color: red">body</span> of modal you can add HTML code also, so you can also create
-                a login or any other custom modal for different purposes. <br><br>
-                Now custom_buttons is an array to be passed if you want to show custom buttons.<br><br> A default button
-                available on modal will be to close it, You donot need to specify close button in this array, in this
-                array you have to pass another JSON which contains details of button such as <span
-                    style="color: red">text</span> to be represented , <span style="color: red">theme</span>( green,
-                blue, yellow, red ) , and an <span style="color: red">onclick</span> listner(an arrow function). You can
-                put any number of buttons just pass them in array in order you want them to be displayed <br><br>
-
-                <span style="color: red;">Note:</span> If you want to address a specific button( for example, in login form you want to show a spinner in login button when request is being made) then you can access it form <span style="color: red;">modal.buttons</span> array. (Replace modal with your initialising name)
-                (This array contains buttons in same order as that you defined in custom_buttons)
-                Other than this some there are some other options available such as <br>
-                <span style="color: red">close_btn_text</span> : to specify text written on default close button (put it
-                in capital for fancy look!) <br>
-                <span style="color: red">draggable</span> : to make modal draggable on thhe screen <br>
-                <span style="color:red">close_on_out_click</span> : to close modal when cliked outside <br>
-                and last but probably not the least <br>
-                <span style="color: red">onclose</span> : a function you want to run on closing the modal (optional)
-                <br>
-                <br>
-                Use the <span style="color: red">.show()</span> method to show the modal. And if you want to
-                programatically close modal then you can also use <span style="color: red">.hide()</span> method.
-                <br><br>
-            </span>
-
-
+            API Reference: <br><br>
+<figure class="table">
+    <table style="border: 1px solid white; overflow-x: scroll;">
+        <thead>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Parameters</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Type</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Value</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Description</strong></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">title</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td style="border: 1px solid white;">
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">The title that will &nbsp;show up on the header of modal</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">body</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">pass the body as a string. If it contains HTML, then wrap it in inverted commas.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">‘light’ or ‘dark’</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">There are two themes inbuilt, which are light and dark.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">custom_buttons</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Array</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Pass an array of the desired number of buttons. See below for more context about this property.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">close_btn_text</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Text that is to be displayed on close button of modal. The default value is “CLOSE”.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">draggable</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">make modal draggable by setting it true. By default it is not.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">close_on_out_click</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you want to close the modal when clicked outside it. By default it is false.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">onclose</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">This function will run when modal is closed</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure><br>
+<p><span style="font-family:monospace; margin: 20px; font-size: 30px; color: aquamarine;"><strong>InBuilt Methods</strong></span></p>
+<br>
+<figure class="table">
+    <table style="border: 1px solid white;">
+        <tbody>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">show()&nbsp;</span></th>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to display the modal</span></td>
+            </tr>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">hide()</span></th>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to hide the modal</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<br>
+<p><span style="font-family:monospace; margin: 20px;  font-size: 30px; color: aquamarine;"><strong>custom_buttons</strong></span></p>
+<p><span style="font-family:monospace; font-size: 20px; font-weight: bolder;">This includes an array of desired number of buttons. The children of this array is a JSON itself (one for each button). It takes following params.</span></p>
+<br>
+<figure class="table">
+    <table style="border: 1px solid white;">
+        <thead>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Name</span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Type</span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">text</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Text to be displayed on button</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p><span style="font-family:monospace;">Four themes are available for buttons.</span></p>
+                    <p><span style="font-family:monospace;">namely <strong>green, blue, red or yellow</strong></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">onclick</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">This is the onclick listener for your button</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<br>
+<p style="font-family:monospace; font-size: 20px" >If you want to format the button afterwards (for example, you want to show a spinner in it when loading), then you can do it by <strong style="color: red;">modal.buttons</strong> array. This will return an array of all buttons in the order you mentioned in custom_butons. <br> You can <a href="mailto:rubikscubeshlokjain@gmail.com">email me</a> for further queries</p>
+<br>
             Now just <span class="chill">chill</span>!!!!
         </div>
     </section>
@@ -239,6 +336,16 @@ modal.show()       //trigger this when you want to show modal
             padding: 0;
         }
 
+        table {
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 20px;
+}
+td,th{padding: 10px;}
         .git-repo {
             font-size: 20px;
             text-align: center;
@@ -542,6 +649,7 @@ modal.show()       //trigger this when you want to show modal
         }
 
         #main {
+            padding-top: 20px;
             display: flex;
             font-family: cubano, sans-serif;
             justify-content: center;
