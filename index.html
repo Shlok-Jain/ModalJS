@@ -162,648 +162,650 @@
 modal.show()       //trigger this when you want to show modal
 </code></pre>
 
-API Reference: <br><br>
-figure class="table">
-<table style="border: 1px solid white; overflow-x: scroll;">
-<thead>
-<tr>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Parameters</strong></span></th>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Type</strong></span></th>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Value</strong></span></th>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Description</strong></span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">title</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;">
-<p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
-</td style="border: 1px solid white;">
-<td style="border: 1px solid white;"><span style="font-family:monospace;">The title that will &nbsp;show up on the header of modal</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">body</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;">
-<p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
-</td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">pass the body as a string. If it contains HTML, then wrap it in inverted commas.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">‘light’ or ‘dark’</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">There are two themes inbuilt, which are light and dark.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">custom_buttons</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Array</span></td>
-<td style="border: 1px solid white;">
-<p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
-</td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Pass an array of the desired number of buttons. See below for more context about this property.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">close_btn_text</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;">
-<p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
-</td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Text that is to be displayed on close button of modal. The default value is “CLOSE”.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">draggable</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">make modal draggable by setting it true. By default it is not.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">close_on_out_click</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you want to close the modal when clicked outside it. By default it is false.</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">hide_close_btn</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you don't want to show the "CLOSE" button. By default it is false</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">onclose</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
-<td style="border: 1px solid white;">
-<p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
-</td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">This function will run when modal is closed</span></td>
-</tr>
-</tbody>
-</table>
-figure><br>
-p><span style="font-family:monospace; margin: 20px; font-size: 30px; color: aquamarine;"><strong>InBuilt Methods</strong></span></p>
-br>
-figure class="table">
-<table style="border: 1px solid white;">
-<tbody>
-<tr>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">show()&nbsp;</span></th>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to display the modal</span></td>
-</tr>
-<tr>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">hide()</span></th>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to hide the modal</span></td>
-</tr>
-</tbody>
-</table>
-figure>
-br>
-p><span style="font-family:monospace; margin: 20px;  font-size: 30px; color: aquamarine;"><strong>custom_buttons</strong></span></p>
-p><span style="font-family:monospace; font-size: 20px; font-weight: bolder;">This includes an array of desired number of buttons. The children of this array is a JSON itself (one for each button). It takes following params.</span></p>
-br>
-figure class="table">
-<table style="border: 1px solid white;">
-<thead>
-<tr>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Name</span></th>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Type</span></th>
-<th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Description</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">text</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Text to be displayed on button</span></td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
-<td style="border: 1px solid white;">
-<p><span style="font-family:monospace;">Four themes are available for buttons.</span></p>
-<p><span style="font-family:monospace;">namely <strong>green, blue, red or yellow</strong></span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">onclick</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
-<td style="border: 1px solid white;"><span style="font-family:monospace;">This is the onclick listener for your button</span></td>
-</tr>
-</tbody>
-</table>
-figure>
-br>
-p style="font-family:monospace; font-size: 20px" >If you want to format the button afterwards (for example, you want to show a spinner in it when loading), then you can do it by <strong style="color: red;">modal.buttons</strong> array. This will return an array of all buttons in the order you mentioned in custom_butons. <br> You can <a href="mailto:rubikscubeshlokjain@gmail.com">email me</a> for further queries</p>
-br>
-Now just <span class="chill">chill</span>!!!!
-</div>
-</section>
+            API Reference: <br><br>
+<figure class="table">
+    <table style="border: 1px solid white; overflow-x: scroll;">
+        <thead>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Parameters</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Type</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Value</strong></span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white; margin: 0;"><span style="font-family:monospace;"><strong>Description</strong></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">title</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td style="border: 1px solid white;">
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">The title that will &nbsp;show up on the header of modal</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">body</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">pass the body as a string. If it contains HTML, then wrap it in inverted commas.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">‘light’ or ‘dark’</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">There are two themes inbuilt, which are light and dark.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">custom_buttons</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Array</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Pass an array of the desired number of buttons. See below for more context about this property.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">close_btn_text</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Text that is to be displayed on close button of modal. The default value is “CLOSE”.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">draggable</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">make modal draggable by setting it true. By default it is not.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">close_on_out_click</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you want to close the modal when clicked outside it. By default it is false.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">hide_close_btn</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you don't want to show the "CLOSE" button. By default it is false</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">onclose</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
+                <td style="border: 1px solid white;">
+                    <p style="text-align:center;"><span style="font-family:monospace;">-</span></p>
+                </td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">This function will run when modal is closed</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure><br>
+<p><span style="font-family:monospace; margin: 20px; font-size: 30px; color: aquamarine;"><strong>InBuilt Methods</strong></span></p>
+<br>
+<figure class="table">
+    <table style="border: 1px solid white;">
+        <tbody>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">show()&nbsp;</span></th>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to display the modal</span></td>
+            </tr>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">hide()</span></th>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Use this when you want to hide the modal</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<br>
+<p><span style="font-family:monospace; margin: 20px;  font-size: 30px; color: aquamarine;"><strong>custom_buttons</strong></span></p>
+<p><span style="font-family:monospace; font-size: 20px; font-weight: bolder;">This includes an array of desired number of buttons. The children of this array is a JSON itself (one for each button). It takes following params.</span></p>
+<br>
+<figure class="table">
+    <table style="border: 1px solid white;">
+        <thead>
+            <tr>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Name</span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Type</span></th>
+                <th style="background:rgba(249, 178, 8, 0.3);border: 1px solid white;"><span style="font-family:monospace;">Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">text</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Text to be displayed on button</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">theme</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">String</span></td>
+                <td style="border: 1px solid white;">
+                    <p><span style="font-family:monospace;">Four themes are available for buttons.</span></p>
+                    <p><span style="font-family:monospace;">namely <strong>green, blue, red or yellow</strong></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">onclick</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Arrow Function</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">This is the onclick listener for your button</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<br>
+<p style="font-family:monospace; font-size: 20px" >If you want to format the button afterwards (for example, you want to show a spinner in it when loading), then you can do it by <strong style="color: red;">modal.buttons</strong> array. This will return an array of all buttons in the order you mentioned in custom_butons. <br> You can <a href="mailto:rubikscubeshlokjain@gmail.com">email me</a> for further queries</p>
+<br>
+            Now just <span class="chill">chill</span>!!!!
+        </div>
+    </section>
 
-<section id="features">
-<h1>Features:</h1>
-<ul>
-<li>You can add HTML in body</li>
-<li>You can make modals draggable</li>
-<li>Light and dark theme</li>
-<li>Ripple effect in all buttons</li>
-<li>Press ESC to close</li>
-<li>Add any number of custom buttons</li>
-<li>Event listners for all buttons</li>
-<li>Four different themes for button available( red, yellow, blue, green )</li>
-<li>You can programatically close modal( .hide() method)</li>
-<li>Looks fancy</li>
-<li>and many more.....</li>
-</ul>
-</section>
+    <section id="features">
+        <h1>Features:</h1>
+        <ul>
+            <li>You can add HTML in body</li>
+            <li>You can make modals draggable</li>
+            <li>Light and dark theme</li>
+            <li>Ripple effect in all buttons</li>
+            <li>Press ESC to close</li>
+            <li>Add any number of custom buttons</li>
+            <li>Event listners for all buttons</li>
+            <li>Four different themes for button available( red, yellow, blue, green )</li>
+            <li>You can programatically close modal( .hide() method)</li>
+            <li>Looks fancy</li>
+            <li>and many more.....</li>
+        </ul>
+    </section>
 
-<section id="others">
-<h1>My other works:</h1>
-<ul>
-<li>Notification-library: <a href="https://shlok-jain.github.io/Notification-library/" target="_blank">shlok - jain .github .io/ Notification-library</a></li>
-</ul>
-</section>
+    <section id="others">
+        <h1>My other works:</h1>
+        <ul>
+            <li>Notification-library: <a href="https://shlok-jain.github.io/Notification-library/" target="_blank">shlok - jain .github .io/ Notification-library</a></li>
+        </ul>
+    </section>
 
-<style>
-@import"https://use.typekit.net/rcr1opg.css";
+    <style>
+        @import"https://use.typekit.net/rcr1opg.css";
 
-* {
-margin: 0;
-padding: 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-table {
-display: block;
-max-width: -moz-fit-content;
-max-width: fit-content;
-margin: 0 auto;
-overflow-x: auto;
-white-space: nowrap;
-font-size: 20px;
+        table {
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 20px;
 }
 td,th{padding: 10px;}
-.git-repo {
-font-size: 20px;
-text-align: center;
-margin: 30px 0px;
-}
+        .git-repo {
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0px;
+        }
 
-.git-repo>span {
-margin: 10px;
-}
+        .git-repo>span {
+            margin: 10px;
+        }
 
-.git-repo>a {
-font-style: normal;
-text-decoration: none;
-background-color: #5460f3;
-padding: 5px;
-border-radius: 10px;
-color: black;
-transition: all 325ms;
-font-family: monospace;
-}
+        .git-repo>a {
+            font-style: normal;
+            text-decoration: none;
+            background-color: #5460f3;
+            padding: 5px;
+            border-radius: 10px;
+            color: black;
+            transition: all 325ms;
+            font-family: monospace;
+        }
 
-.git-repo>a:hover {
-background-color: #7f88f7;
-}
+        .git-repo>a:hover {
+            background-color: #7f88f7;
+        }
 
-html {
-scroll-behavior: smooth;
-scroll-padding-top: 60px;
-}
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
 
-body {
-background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%),hsl(294, 57%, 19%));
-min-height: 100vh;
-background-attachment: fixed;
-}
+        body {
+            background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%),hsl(294, 57%, 19%));
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
 
-#demo {
-font-family: cubano, sans-serif;
+        #demo {
+            font-family: cubano, sans-serif;
 
-width: 100%;
-text-align: center;
-color: white;
-margin-bottom: 100px;
-scroll-padding: 20px;
-}
+            width: 100%;
+            text-align: center;
+            color: white;
+            margin-bottom: 100px;
+            scroll-padding: 20px;
+        }
 
-#demo>h1 {
-background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-size: 40px;
-font-weight: 200;
-margin: 20px auto;
-}
+        #demo>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-weight: 200;
+            margin: 20px auto;
+        }
 
-#demo>.demo-container {
-display: flex;
-font-size: 25px;
-font-weight: 200;
-font-family: cubano, sans-serif;
-margin: 50px 0px;
-}
+        #demo>.demo-container {
+            display: flex;
+            font-size: 25px;
+            font-weight: 200;
+            font-family: cubano, sans-serif;
+            margin: 50px 0px;
+        }
 
-.demo-child {
-font-family: cubano, sans-serif;
-width: 33.33%;
-}
+        .demo-child {
+            font-family: cubano, sans-serif;
+            width: 33.33%;
+        }
 
-.type {
-display: flex;
-font-family: cubano, sans-serif;
-flex-direction: column;
-}
+        .type {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
 
-.type>h3 {
-margin: 10px;
-font-size: 30px;
-font-family: cubano, sans-serif;
-color: plum;
-}
+        .type>h3 {
+            margin: 10px;
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            color: plum;
+        }
 
-.theme {
-display: flex;
-font-family: cubano, sans-serif;
-flex-direction: column;
-}
+        .theme {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
 
-.theme>h3 {
-margin: 10px;
-font-size: 30px;
-font-family: cubano, sans-serif;
-color: plum;
-}
+        .theme>h3 {
+            margin: 10px;
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            color: plum;
+        }
 
-.duration {
-display: flex;
-font-family: cubano, sans-serif;
-flex-direction: column;
-}
+        .duration {
+            display: flex;
+            font-family: cubano, sans-serif;
+            flex-direction: column;
+        }
 
-.duration>h3 {
-margin: 10px;
-font-family: cubano, sans-serif;
-font-size: 30px;
-color: plum;
-}
+        .duration>h3 {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            font-size: 30px;
+            color: plum;
+        }
 
-.duration>select {
-font-family: cubano, sans-serif;
-width: 90%;
-font-size: 25px;
-}
+        .duration>select {
+            font-family: cubano, sans-serif;
+            width: 90%;
+            font-size: 25px;
+        }
 
-.shownotification>button {
-background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
-padding: 0.75rem 2.75rem;
-font-weight: 200;
-outline: none;
-box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
-color: black;
-border-radius: 10px;
-cursor: pointer;
-margin: 10px;
-font-size: 20px;
-transition: 325ms all;
-border: none;
-font-family: cubano, sans-serif;
-}
+        .shownotification>button {
+            background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
+            padding: 0.75rem 2.75rem;
+            font-weight: 200;
+            outline: none;
+            box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+            transition: 325ms all;
+            border: none;
+            font-family: cubano, sans-serif;
+        }
 
-.shownotification>button:hover {
-opacity: 0.8;
-}
+        .shownotification>button:hover {
+            opacity: 0.8;
+        }
 
-#usage {
-width: 100%;
-text-align: center;
-color: white;
-font-family: cubano, sans-serif;
-margin-bottom: 70px;
-}
+        #usage {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: cubano, sans-serif;
+            margin-bottom: 70px;
+        }
 
-#usage>h1 {
-background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-size: 40px;
-font-weight: 200;
-margin: 20px auto;
-}
+        #usage>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-weight: 200;
+            margin: 20px auto;
+        }
 
-#usage>.cdnlinks {
-font-size: 30px;
-font-family: cubano, sans-serif;
-font-weight: 100;
-}
+        #usage>.cdnlinks {
+            font-size: 30px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+        }
 
-.chill {
-background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
-background-clip: text;
--webkit-background-clip: text;
-font-family: cubano, sans-serif;
--webkit-text-fill-color: transparent;
-}
+        .chill {
+            background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: cubano, sans-serif;
+            -webkit-text-fill-color: transparent;
+        }
 
-#features {
-width: 100%;
-font-family: cubano, sans-serif;
-text-align: center;
-color: white;
-margin-bottom: 70px;
-}
+        #features {
+            width: 100%;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            color: white;
+            margin-bottom: 70px;
+        }
 
-#features>h1 {
-background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-size: 40px;
-font-family: cubano, sans-serif;
-font-weight: 200;
-margin: 20px auto;
-}
+        #features>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            margin: 20px auto;
+        }
 
-#features>ul {
-margin: 10px;
-font-family: cubano, sans-serif;
-text-align: left;
-}
+        #features>ul {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            text-align: left;
+        }
 
-#features>ul>li {
-list-style: disc;
-font-size: 25px;
-font-family: cubano, sans-serif;
-font-weight: 100;
-margin: 20px;
-}
+        #features>ul>li {
+            list-style: disc;
+            font-size: 25px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+            margin: 20px;
+        }
 
-#others {
-width: 100%;
-font-family: cubano, sans-serif;
-text-align: center;
-color: white;
-margin-bottom: 70px;
-}
+        #others {
+            width: 100%;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            color: white;
+            margin-bottom: 70px;
+        }
 
-#others>h1 {
-background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-size: 40px;
-font-family: cubano, sans-serif;
-font-weight: 200;
-margin: 20px auto;
-}
+        #others>h1 {
+            background: linear-gradient(0deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            margin: 20px auto;
+        }
 
-#others>ul {
-margin: 10px;
-font-family: cubano, sans-serif;
-text-align: left;
-}
+        #others>ul {
+            margin: 10px;
+            font-family: cubano, sans-serif;
+            text-align: left;
+        }
 
-#others>ul>li {
-list-style: disc;
-font-size: 25px;
-font-family: cubano, sans-serif;
-font-weight: 100;
-margin: 20px;
-}
-#others>ul>li>a{
-font-style: normal;
-text-decoration: none;
-background-color: #5460f3;
-padding: 5px;
-border-radius: 10px;
-color: black;
-transition: all 325ms;
-font-family: monospace;
-font-size: 20px;
-}
-#others>ul>li>a:hover{
-background-color: #7f88f7;
-}
+        #others>ul>li {
+            list-style: disc;
+            font-size: 25px;
+            font-family: cubano, sans-serif;
+            font-weight: 100;
+            margin: 20px;
+        }
+        #others>ul>li>a{
+            font-style: normal;
+            text-decoration: none;
+            background-color: #5460f3;
+            padding: 5px;
+            border-radius: 10px;
+            color: black;
+            transition: all 325ms;
+            font-family: monospace;
+            font-size: 20px;
+        }
+        #others>ul>li>a:hover{
+            background-color: #7f88f7;
+        }
 
-nav {
-width: 100%;
-height: 60px;
-color: white;
-font-size: 25px;
-display: flex;
-font-family: cubano, sans-serif;
-font-weight: 200;
-padding: 10px;
-box-sizing: border-box;
-background-color: rgba(0, 0, 0, 0.8);
-position: fixed;
-top: 0;
-left: 0;
-}
+        nav {
+            width: 100%;
+            height: 60px;
+            color: white;
+            font-size: 25px;
+            display: flex;
+            font-family: cubano, sans-serif;
+            font-weight: 200;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
 
-.icon {
-font-family: cubano, sans-serif;
-width: 30%;
-}
+        .icon {
+            font-family: cubano, sans-serif;
+            width: 30%;
+        }
 
-nav>ul {
-width: 70%;
-font-family: cubano, sans-serif;
-display: flex;
-list-style: none;
-justify-content: end;
-}
+        nav>ul {
+            width: 70%;
+            font-family: cubano, sans-serif;
+            display: flex;
+            list-style: none;
+            justify-content: end;
+        }
 
-nav>ul>li {
-margin-left: 10%;
-background: white;
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-family: cubano, sans-serif;
-transition: 325ms all;
-}
+        nav>ul>li {
+            margin-left: 10%;
+            background: white;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: cubano, sans-serif;
+            transition: 325ms all;
+        }
 
-nav>ul>li:hover {
-background: linear-gradient(109.6deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-family: cubano, sans-serif;
-transition: 325ms all;
-}
+        nav>ul>li:hover {
+            background: linear-gradient(109.6deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: cubano, sans-serif;
+            transition: 325ms all;
+        }
 
-.icon>span {
-background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
-font-family: cubano, sans-serif;
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+        .icon>span {
+            background: -webkit-linear-gradient(90deg, #00DBDE, #FC00FF);
+            font-family: cubano, sans-serif;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-#main {
-padding-top: 20px;
-display: flex;
-font-family: cubano, sans-serif;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-}
+        #main {
+            padding-top: 20px;
+            display: flex;
+            font-family: cubano, sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-.intro {
-color: aliceblue;
-font-family: cubano, sans-serif;
-padding: 10px;
-box-sizing: border-box;
-}
+        .intro {
+            color: aliceblue;
+            font-family: cubano, sans-serif;
+            padding: 10px;
+            box-sizing: border-box;
+        }
 
-.intro>h1 {
-font-size: 50px;
-font-family: cubano, sans-serif;
-text-align: center;
-font-weight: 400;
-margin-top: 40px;
-margin-bottom: 20px;
-margin-left: 30px;
-}
 
-.intro>h1>span {
-background: -webkit-linear-gradient(180deg, #00F260,#0575E6);
-background-clip: text;
-font-family: cubano, sans-serif;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+        .intro>h1 {
+            font-size: 50px;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
 
-.intro-text {
-font-size: 20px;
-color: grey;
-font-weight: 300;
-font-family: cubano, sans-serif;
-text-align: center;
-width: 70%;
-margin: 30px auto;
-}
+        .intro>h1>span {
+            background: -webkit-linear-gradient(180deg, #00F260,#0575E6);
+            background-clip: text;
+            font-family: cubano, sans-serif;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-#demo-btn {
-background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
-padding: 0.75rem 2.75rem;
-font-weight: 200;
-font-family: cubano, sans-serif;
-outline: none;
-box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
-color: black;
-border-radius: 10px;
-cursor: pointer;
-margin: 10px;
-font-size: 20px;
-transition: 325ms all;
-border: none;
-font-family: cubano, sans-serif;
-}
+        .intro-text {
+            font-size: 20px;
+            color: grey;
+            font-weight: 300;
+            font-family: cubano, sans-serif;
+            text-align: center;
+            width: 70%;
+            margin: 30px auto;
+        }
 
-#demo-btn:hover {
-opacity: 0.8;
-}
+        #demo-btn {
+            background: linear-gradient(76.35deg, #BA5370, #F4E2D8);
+            padding: 0.75rem 2.75rem;
+            font-weight: 200;
+            font-family: cubano, sans-serif;
+            outline: none;
+            box-shadow: rgb(0 0 0 / 4%) 0px 0px 24px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+            transition: 325ms all;
+            border: none;
+            font-family: cubano, sans-serif;
+        }
 
-.demo {
-display: flex;
-justify-content: center;
-font-family: cubano, sans-serif;
-align-items: center;
-}
 
-.hamburger {
-display: none;
-}
+        #demo-btn:hover {
+            opacity: 0.8;
+        }
 
-@media only screen and (max-width:890px) {
-.hamburger {
-display: block;
-position: absolute;
-right: 10px;
-width: 10%;
-}
+        .demo {
+            display: flex;
+            justify-content: center;
+            font-family: cubano, sans-serif;
+            align-items: center;
+        }
 
-nav>ul {
-position: absolute;
-top: -300px;
-flex-direction: column;
-text-align: center;
-background-color: rgba(0, 0, 0, 0.8);
-width: 100%;
-margin-left: -10px;
-border-radius: 10px;
-padding: 10px;
-}
+        .hamburger {
+            display: none;
+        }
 
-nav>ul>li {
-margin-top: 10px;
-margin-left: 0;
-}
+        @media only screen and (max-width:890px) {
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 10px;
+                width: 10%;
+            }
 
-.icon {
-width: 90%;
-}
+            nav>ul {
+                position: absolute;
+                top: -300px;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                margin-left: -10px;
+                border-radius: 10px;
+                padding: 10px;
+            }
 
-.intro>h1 {
-font-size: 40px;
-}
-.intro-text{
-margin: 30px auto;
-width: 95%;
-}
+            nav>ul>li {
+                margin-top: 10px;
+                margin-left: 0;
+            }
 
-.intro>h1>span {
-font-size: 40px;
-}
+            .icon {
+                width: 90%;
+            }
 
-.demo-child>h3 {
-font-size: 25px;
-font-weight: 100;
-}
+            .intro>h1 {
+                font-size: 40px;
+            }
+            .intro-text{
+                margin: 30px auto;
+                width: 95%;
+            }
 
-label>span {
-font-size: 15px;
-font-weight: 20;
-}
+            .intro>h1>span {
+                font-size: 40px;
+            }
 
-#duration {
-font-size: 20px;
-}
+            .demo-child>h3 {
+                font-size: 25px;
+                font-weight: 100;
+            }
 
-#usage>.cdnlinks {
-font-size: 20px;
-}
+            label>span {
+                font-size: 15px;
+                font-weight: 20;
+            }
 
-#features>ul>li {
-font-size: 20px;
-font-weight: 50;
-}
-}
+            #duration {
+                font-size: 20px;
+            }
 
-@keyframes navopen {
-0% {
-top: -300px;
-}
+            #usage>.cdnlinks {
+                font-size: 20px;
+            }
 
-100% {
-top: 60px;
-}
-}
+            #features>ul>li {
+                font-size: 20px;
+                font-weight: 50;
+            }
+        }
 
-@keyframes navclose {
-0% {
-top: 60px;
-}
+        @keyframes navopen {
+            0% {
+                top: -300px;
+            }
 
-100% {
-top: -300px;
-}
-}
-</style>
+            100% {
+                top: 60px;
+            }
+        }
+
+        @keyframes navclose {
+            0% {
+                top: 60px;
+            }
+
+            100% {
+                top: -300px;
+            }
+        }
+    </style>
     <script>
         function clicked() {
             var type = document.querySelector('input[name="type"]:checked').value;
