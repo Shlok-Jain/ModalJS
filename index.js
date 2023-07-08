@@ -16,6 +16,7 @@ class ModalJS {
       modal_body.classList.add("modaljs-modal-body");
       modal_button.classList.add("modaljs-modal-button");
       close_btn.classList.add("modaljs-close-btn");
+      close_btn.classList.add("modaljs-btn")
       if(this.json.theme == "dark"){
         modal.classList.add("modaljs-modal-dark")
         modal_body.classList.add("modaljs-modal-body-dark")
@@ -118,6 +119,7 @@ class ModalJS {
           var btn = document.createElement("button");
           btn.innerText = button_list[i].text;
           btn.classList.add(`modaljs-btn-${button_list[i].theme}`);
+          btn.classList.add('modaljs-btn')
           if(this.json.theme == "dark"){btn.classList.add(`modaljs-btn-${button_list[i].theme}-dark`);}
           btn.addEventListener("click",button_list[i].onclick)
           btn.addEventListener('mousedown',(e)=>{
@@ -136,7 +138,9 @@ class ModalJS {
 
         }
       }
-      modal_button.appendChild(close_btn);
+      if(!this.json.hide_close_btn){
+        modal_button.appendChild(close_btn);
+      }
     }
     show() {
       this.overlay.style.display = "flex";

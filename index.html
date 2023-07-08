@@ -19,20 +19,21 @@
     })(window, document, "clarity", "script", "g2uyqaossd");
 </script>
 
-    <script src="/ModalJS/index.js"></script>
-    <link rel="stylesheet" href="/ModalJS/index.css">
+<script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.css">
 
-    <script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.css">
-    <!-- <link rel="stylesheet" href="index.css">
-        <script src="./index.js"></script> -->
+    <!-- <script src="/ModalJS/index.js"></script>
+    <link rel="stylesheet" href="/ModalJS/index.css"> -->
+
+    <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script>
 
     <!-- prismjs -->
-    <link rel="stylesheet" href="/ModalJS/prismjs/prism.css">
-    <script src="/ModalJS/prismjs/prism.js"></script>
+    <!-- <link rel="stylesheet" href="/ModalJS/prismjs/prism.css">
+    <script src="/ModalJS/prismjs/prism.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="prismjs/prism.css">
-    <script src="prismjs/prism.js"></script> -->
+    <link rel="stylesheet" href="prismjs/prism.css">
+    <script src="prismjs/prism.js"></script>
 
 
 </head>
@@ -167,6 +168,7 @@
     close_btn_text: "CLOSE",
     draggable: true,
     close_on_out_click: true,
+    hide_close_btn:true,
     onclose:()=>{console.log('closed')}
 })
 
@@ -234,6 +236,12 @@ modal.show()       //trigger this when you want to show modal
                 <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
                 <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
                 <td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you want to close the modal when clicked outside it. By default it is false.</span></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">hide_close_btn</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Bollean&nbsp;</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">true / false</span></td>
+                <td style="border: 1px solid white;"><span style="font-family:monospace;">Set it true if you don't want to show the "CLOSE" button. By default it is false</span></td>
             </tr>
             <tr>
                 <td style="border: 1px solid white;"><span style="font-family:monospace;">onclose</span></td>

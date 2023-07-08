@@ -24,7 +24,7 @@
     max-width: 80%;
 }
 
-.modaljs-ripple{
+.modaljs-ripple {
     border-radius: 50%;
     position: absolute;
     background-color: grey;
@@ -32,8 +32,9 @@
     height: 50px;
     opacity: 0.5;
 }
-.modaljs-modal-dark{
-    background-color: rgb(36, 36, 40,1);
+
+.modaljs-modal-dark {
+    background-color: rgb(36, 36, 40, 1);
     color: white;
 }
 
@@ -55,6 +56,7 @@
     max-height: 50vh;
     overflow-y: auto;
 }
+
 .modaljs-modal-body-dark {
     font-size: 20px;
     padding: 10px;
@@ -73,11 +75,10 @@
     align-items: center;
 }
 
-.modaljs-close-btn {
+.modaljs-btn {
     position: relative;
     padding: 10px;
     font-size: 15px;
-    color: rgb(255, 45, 45);
     font-weight: 600;
     border: none;
     outline: none;
@@ -88,31 +89,26 @@
     overflow: hidden;
 }
 
-.modaljs-close-btn-dark{
+.modaljs-close-btn {
+    color: rgb(255, 45, 45);
+}
+
+.modaljs-close-btn-dark {
     background: #303030;
 }
 
 .modaljs-close-btn:hover {
     background-color: rgb(247, 207, 207);
 }
+
 .modaljs-close-btn-dark:hover {
     background-color: rgb(82 42 42);
 }
 
 .modaljs-btn-red {
-    position: relative;
-    padding: 10px;
-    font-size: 15px;
     color: rgb(255, 45, 45);
-    font-weight: 600;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    transition: all 325ms;
-    cursor: pointer;
-    margin-left: 10px;
-    overflow: hidden;
 }
+
 .modaljs-btn-red-dark {
     background: #303030;
 }
@@ -120,24 +116,15 @@
 .modaljs-btn-red:hover {
     background-color: rgb(247, 207, 207);
 }
+
 .modaljs-btn-red-dark:hover {
     background-color: rgb(82 42 42);
 }
 
 .modaljs-btn-green {
-    position: relative;
-    padding: 10px;
-    font-size: 15px;
     color: #28b32f;
-    font-weight: 600;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    transition: all 325ms;
-    cursor: pointer;
-    margin-left: 10px;
-    overflow: hidden;
 }
+
 .modaljs-btn-green-dark {
     background: #303030;
 }
@@ -145,23 +132,13 @@
 .modaljs-btn-green:hover {
     background-color: rgb(198, 255, 196);
 }
+
 .modaljs-btn-green-dark:hover {
     background-color: rgb(54 72 53);
 }
 
 .modaljs-btn-yellow {
-    position: relative;
-    padding: 10px;
-    font-size: 15px;
     color: rgb(199, 199, 0);
-    font-weight: 600;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    transition: all 325ms;
-    cursor: pointer;
-    margin-left: 10px;
-    overflow: hidden;
 }
 
 .modaljs-btn-yellow-dark {
@@ -171,23 +148,13 @@
 .modaljs-btn-yellow:hover {
     background-color: rgb(247, 255, 173);
 }
+
 .modaljs-btn-yellow-dark:hover {
     background-color: rgb(64 66 43);
 }
 
 .modaljs-btn-blue {
-    position: relative;
-    padding: 10px;
-    font-size: 15px;
     color: rgb(38, 14, 255);
-    font-weight: 600;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    transition: all 325ms;
-    cursor: pointer;
-    margin-left: 10px;
-    overflow: hidden;
 }
 
 .modaljs-btn-blue-dark {
@@ -197,6 +164,7 @@
 .modaljs-btn-blue:hover {
     background-color: rgb(211, 203, 253);
 }
+
 .modaljs-btn-blue-dark:hover {
     background-color: rgb(35 31 56);
 }
@@ -244,12 +212,14 @@
         opacity: 0;
     }
 }
-@keyframes modaljs-ripple{
-    0%{
+
+@keyframes modaljs-ripple {
+    0% {
         transform: scale(0);
         opacity: 0.5;
     }
-    100%{
+
+    100% {
         transform: scale(3);
         opacity: 0;
     }
@@ -259,5 +229,21 @@
     .modaljs-modal {
         width: 80%;
         min-width: 0px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .modaljs-modal {
+        max-width: unset;
+        width: 90%;
+        min-width: 0px;
+    }
+
+    .modaljs-btn {
+        padding: 7px;
+        margin-left: 7px;
+    }
+    .modaljs-modal-button{
+        min-height: unset;
     }
 }
