@@ -20,18 +20,18 @@
 <script src="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shlok-Jain/Notification-library@latest/index.css">
 
-    <script src="/ModalJS/index.js"></script>
-    <link rel="stylesheet" href="/ModalJS/index.css">
+    <!-- <script src="/ModalJS/index.js"></script>
+    <link rel="stylesheet" href="/ModalJS/index.css"> -->
 
-    <!-- <link rel="stylesheet" href="index.css">
-        <script src="./index.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script>
 
     <!-- prismjs -->
-    <link rel="stylesheet" href="/ModalJS/prismjs/prism.css">
-    <script src="/ModalJS/prismjs/prism.js"></script>
+    <!-- <link rel="stylesheet" href="/ModalJS/prismjs/prism.css">
+    <script src="/ModalJS/prismjs/prism.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="prismjs/prism.css">
-    <script src="prismjs/prism.js"></script> -->
+    <link rel="stylesheet" href="prismjs/prism.css">
+    <script src="prismjs/prism.js"></script>
 </head>
 <body>
     <nav>
@@ -293,7 +293,7 @@ modal.show()       //trigger this when you want to show modal
     </table>
 </figure>
 <br>
-<p style="font-family:monospace; font-size: 20px" >If you want to format the button afterwards (for example, you want to show a spinner in it when loading), then you can do it by <strong style="color: red;">modal.buttons</strong> array. This will return an array of all buttons in the order you mentioned in custom_butons. <br> You can <a href="mailto:rubikscubeshlokjain@gmail.com">email me</a> for further queries</p>
+<p style="font-family:monospace; font-size: 20px" >If you want to format the button afterwards (for example, you want to show a spinner in it when loading), then you can do it by <strong style="color: red;">modal.buttons</strong> array. This will return an array of all buttons in the order you mentioned in custom_butons.</p>
 <br>
             Now just <span class="chill">chill</span>!!!!
         </div>
@@ -354,12 +354,13 @@ td,th{padding: 10px;}
         .git-repo>a {
             font-style: normal;
             text-decoration: none;
-            background-color: #5460f3;
+            background-color: #7facef;
             padding: 5px;
             border-radius: 10px;
             color: black;
             transition: all 325ms;
             font-family: monospace;
+            font-weight: bold;
         }
 
         .git-repo>a:hover {
@@ -372,7 +373,9 @@ td,th{padding: 10px;}
         }
 
         body {
-            background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%),hsl(294, 57%, 19%));
+            /* background: linear-gradient(0deg, hsl(251deg 24% 9%), hsl(294, 57%, 19%),hsl(294, 57%, 19%));
+             */
+             background-color: #363636;
             min-height: 100vh;
             background-attachment: fixed;
         }
@@ -406,7 +409,7 @@ td,th{padding: 10px;}
         }
 
         .demo-child {
-            font-family: cubano, sans-serif;
+            font-family: monospace !important;
             width: 33.33%;
         }
 
@@ -528,14 +531,13 @@ td,th{padding: 10px;}
 
         #features>ul {
             margin: 10px;
-            font-family: cubano, sans-serif;
+            font-family: monospace;
             text-align: left;
         }
 
         #features>ul>li {
             list-style: disc;
             font-size: 25px;
-            font-family: cubano, sans-serif;
             font-weight: 100;
             margin: 20px;
         }
@@ -575,13 +577,14 @@ td,th{padding: 10px;}
         #others>ul>li>a{
             font-style: normal;
             text-decoration: none;
-            background-color: #5460f3;
+            background-color: #7facef;
             padding: 5px;
             border-radius: 10px;
             color: black;
             transition: all 325ms;
             font-family: monospace;
             font-size: 20px;
+            font-weight: bold;
         }
         #others>ul>li>a:hover{
             background-color: #7f88f7;
@@ -618,21 +621,17 @@ td,th{padding: 10px;}
 
         nav>ul>li {
             margin-left: 10%;
-            background: white;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             font-family: cubano, sans-serif;
+            margin-top: 5px;
+        }
+        nav>ul>li>a{
+            text-decoration: none;
+            color: white;
             transition: 325ms all;
         }
 
-        nav>ul>li:hover {
-            background: linear-gradient(109.6deg, rgba(239, 31, 31, 0.78) 11.2%, rgba(249, 178, 8, 1) 91.1%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: cubano, sans-serif;
-            transition: 325ms all;
+        nav>ul>li>a:hover {
+            color: brown;
         }
 
         .icon>span {
@@ -680,9 +679,9 @@ td,th{padding: 10px;}
 
         .intro-text {
             font-size: 20px;
-            color: grey;
+            color: #c6c6c6;
             font-weight: 300;
-            font-family: cubano, sans-serif;
+            font-family: monospace;
             text-align: center;
             width: 70%;
             margin: 30px auto;
@@ -741,10 +740,6 @@ td,th{padding: 10px;}
                 padding: 10px;
             }
 
-            nav>ul>li {
-                margin-top: 10px;
-                margin-left: 0;
-            }
 
             .icon {
                 width: 90%;
